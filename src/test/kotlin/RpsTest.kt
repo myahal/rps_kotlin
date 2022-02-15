@@ -4,8 +4,8 @@ import kotlin.test.assertEquals
 class RpsTest {
     @Test
     fun rockVsScissors() {
-        val result = Requests().play("rock", "scissors")
+        val result = Requests().play(Throws.ROCK, Throws.SCISSORS)
 
-        assertEquals("Player 1 Wins", result)
+        assertEquals(Result.P1_WINS, result)
     }
 }

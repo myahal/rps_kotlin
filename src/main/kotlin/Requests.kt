@@ -1,5 +1,13 @@
+enum class Throws {
+    ROCK, SCISSORS
+}
+
+enum class Result {
+    P1_WINS
+}
+
 class Requests {
-    fun play(p1: String, p2: String): String {
-        return "Player 1 Wins"
+    fun play(p1: Throws, p2: Throws): Result {
+        return Result.P1_WINS
     }
 }
