@@ -1,5 +1,5 @@
 enum class Throws {
-    ROCK, SCISSORS
+    ROCK, SCISSORS, PAPER
 }
 
 enum class Result {
@@ -8,7 +8,7 @@ enum class Result {
 
 class Requests {
     fun play(p1: Throws, p2: Throws): Result {
-        if (p1 == Throws.ROCK) {
+        if (p1 == Throws.ROCK || p2 == Throws.PAPER) {
             return Result.P1_WINS
         }
         return Result.P2_WINS
