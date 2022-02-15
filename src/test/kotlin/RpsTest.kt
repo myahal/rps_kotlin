@@ -29,4 +29,11 @@ class RpsTest {
 
         assertEquals(Result.P2_WINS, result)
     }
+
+    @Test
+    fun PaperVsRock() {
+        val result = Requests().play(Throws.PAPER, Throws.ROCK)
+
+        assertEquals(Result.P1_WINS, result)
+    }
 }
