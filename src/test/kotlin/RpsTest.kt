@@ -50,4 +50,18 @@ class RpsTest {
 
         assertEquals(Result.TIE, result)
     }
+
+    @Test
+    fun PaperVsPaper() {
+        val result = Requests().play(Throws.PAPER, Throws.PAPER)
+
+        assertEquals(Result.TIE, result)
+    }
+
+    @Test
+    fun ScissorsVsScissors() {
+        val result = Requests().play(Throws.SCISSORS, Throws.SCISSORS)
+
+        assertEquals(Result.TIE, result)
+    }
 }
