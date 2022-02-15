@@ -43,4 +43,11 @@ class RpsTest {
 
         assertEquals(Result.P2_WINS, result)
     }
+
+    @Test
+    fun RockVsRock() {
+        val result = Requests().play(Throws.ROCK, Throws.ROCK)
+
+        assertEquals(Result.TIE, result)
+    }
 }
