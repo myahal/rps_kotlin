@@ -22,4 +22,11 @@ class RpsTest {
 
         assertEquals(Result.P1_WINS, result)
     }
+
+    @Test
+    fun PaperVsScissors() {
+        val result = Requests().play(Throws.PAPER, Throws.SCISSORS)
+
+        assertEquals(Result.P2_WINS, result)
+    }
 }
