@@ -2,20 +2,24 @@ enum class Throws {
     ROCK, SCISSORS, PAPER
 }
 
-enum class Result {
-    P1_WINS, P2_WINS, TIE
+interface Observer {
+    fun p1Wins()
+    fun p2Wins()
+    fun tie()
 }
 
 class Requests {
-    fun play(p1: Throws, p2: Throws): Result {
+    fun play(p1: Throws, p2: Throws, observer: Observer): Unit {
         if (p1 == p2) {
-            return Result.TIE
+            observer.tie()
+            return
         }
         if (p1 == Throws.ROCK && p2 == Throws.SCISSORS
             || p1 == Throws.SCISSORS &&  p2 == Throws.PAPER
             || p1 == Throws.PAPER && p2 == Throws.ROCK) {
-            return Result.P1_WINS
+            observer.p1Wins()
+        } else {
+            observer.p2Wins()
         }
-        return Result.P2_WINS
     }
 }
